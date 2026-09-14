@@ -30,6 +30,13 @@ public: // специфікатор доступу, описує відкрит�
         cout << "Parametrized constructor!" << endl;
     }
 
+    // Параметризований конструктор
+    Student(int age) {
+        this->name = "no name";
+        this->age = age;
+        cout << "Parametrized constructor!" << endl;
+    }
+
     ~Student() {
         cout << "Destructor!" << endl;
     }
@@ -63,5 +70,7 @@ int main() {
     cout << "Student's name is " << student2->getName() << " and age is " << student2->getAge() << endl;
     Student student3("Ivan");
     delete student2;
+
+    Student student4;
     return 0;
 }
